@@ -1,0 +1,638 @@
+@charset "UTF-8";
+/*
+=================================================================
+[#] MI FARO DIGITAL - HOJA DE ESTILOS PRINCIPAL
+=================================================================
+ÍNDICE:
+[#] 1. ESTILOS RESET
+    --- 1.1. Variables de Raíz (Colores, Fuentes)
+    --- 1.2. Estilos Generales del Body y Tipografía
+[#] 2. COMPONENTES REUTILIZABLES
+    --- 2.1. Botones
+    --- 2.2. Separadores de Sección
+[#] 3. ESTRUCTURA PRINCIPAL DEL SITIO
+    --- 3.1. Header y Navegación (Bootstrap Navbar)
+    --- 3.2. Footer
+[#] 4. ESTILOS ESPECÍFICOS POR PÁGINA
+    --- 4.1. Página de Inicio (index.html)
+    --- 4.2. Página de Instituciones (instituciones.html)
+    --- 4.3. Página Para Vos (para-vos.html)
+    --- 4.4. Página Casos de Éxito (casos-de-exito.html)
+    --- 4.5. Página Nosotros (nosotros.html)
+    --- 4.6. Página Contacto (contacto.html)
+[#] 5. ANIMACIONES Y EFECTOS
+    --- 5.1. Animación de Entrada al Hacer Scroll
+[#] 6. MEDIA QUERIES (DISEÑO RESPONSIVE)
+=================================================================
+*/
+/*
+=================================================================
+[#] 1. ESTILOS RESET
+    --- 1.1. Variables de Raíz (Colores, Fuentes)
+    --- 1.2. Estilos Generales del Body y Tipografía
+=================================================================
+*/
+/*
+============================================
+[#] 1. ESTILOS RESET
+============================================
+*/
+/* --- 1.1. Variables de Raíz (Colores, Fuentes) --- */
+:root {
+  --font-title: "Poppins", sans-serif;
+  --font-text: "Lato", sans-serif;
+  --color-white: #FFFFFF;
+  --color-dark: #212529;
+  --color-light-gray: #F8F9FA;
+  --bs-primary: #0D6EFD; /* Azul Faro */
+  --color-secondary: #D63384; /* Magenta */
+  --color-success: #198754; /* Verde Éxito */
+  --color-warning: #FFC107; /* Amarillo Idea */
+}
+
+/* --- 1.2. Estilos Generales del Body y Tipografía --- */
+body {
+  --bs-body-font-family: var(--font-text);
+  --bs-body-color: var(--color-dark);
+  --bs-body-line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--font-title);
+  font-weight: 700;
+}
+
+/*
+=================================================================
+[#] 2. COMPONENTES REUTILIZABLES
+    --- 2.1. Botones
+    --- 2.2. Separadores de Sección
+=================================================================
+*/
+/*
+============================================
+[#] 2. COMPONENTES REUTILIZABLES
+============================================
+*/
+/* --- 2.1. Botones --- */
+.button {
+  display: inline-block;
+  background-color: var(--bs-primary);
+  color: var(--color-white);
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  border: none;
+}
+
+.button:hover {
+  color: var(--color-white);
+  transform: translateY(-3px);
+}
+
+.button-alt {
+  background-color: var(--color-secondary);
+}
+
+.button-alt:hover {
+  background-color: #b32a6d;
+}
+
+/* --- 2.2. Separadores de Sección --- */
+.section-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 80px 0;
+}
+
+.divider-title {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #adb5bd;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.section-divider hr {
+  flex-grow: 1;
+  border: 0;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(to right, var(--bs-primary), var(--color-secondary), var(--color-success), var(--color-warning));
+}
+
+/* --- 4.0. Encabezado de Página Genérico --- */
+.page-hero {
+  padding: 60px 0;
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  text-align: center;
+}
+
+.page-hero h1 {
+  font-size: 3rem;
+  color: var(--color-white);
+}
+
+.page-hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 700px;
+  margin: 10px auto 0;
+}
+
+/*
+=================================================================
+[#] 3. ESTRUCTURA PRINCIPAL DEL SITIO
+    --- 3.1. Header y Navegación (Bootstrap Navbar)
+    --- 3.2. Footer
+=================================================================
+*/
+/* --- 3.1. Header y Navegación (Bootstrap Navbar) --- */
+.main-header .navbar {
+  background-color: var(--color-white);
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.main-header .nav-link {
+  font-weight: 700;
+  color: var(--color-dark);
+  margin: 0 10px;
+  transition: color 0.3s ease;
+}
+
+.main-header .nav-link:hover, .main-header .nav-link.active {
+  color: var(--bs-primary);
+}
+
+.main-header .button-contact {
+  background-color: var(--bs-primary);
+  color: var(--color-white) !important;
+  padding: 10px 20px !important;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.main-header .button-contact:hover {
+  background-color: #0b5ed7;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+}
+
+/* --- 3.2. Footer --- */
+.main-footer {
+  background-color: var(--color-dark);
+  color: var(--color-white);
+  padding-top: 60px;
+}
+
+.footer-container {
+  display: flex;
+  gap: 50px;
+  padding-bottom: 40px;
+}
+
+.footer-mission {
+  flex: 2;
+}
+
+.footer-contact {
+  flex: 1;
+}
+
+.footer-mission h3, .footer-contact h3 {
+  color: var(--color-warning);
+  margin-bottom: 20px;
+}
+
+.footer-contact .button {
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.footer-bottom {
+  background-color: #111;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+/*
+=================================================================
+[#] 4. ESTILOS ESPECÍFICOS POR PÁGINA
+    --- 4.1. Página de Inicio (index.html)
+    --- 4.2. Página de Instituciones (instituciones.html)
+    --- 4.3. Página Para Vos (para-vos.html)
+    --- 4.4. Página Casos de Éxito (casos-de-exito.html)
+    --- 4.5. Página Nosotros (nosotros.html)
+    --- 4.6. Página Contacto (contacto.html)
+=================================================================
+*/
+/* --- 4.1. Página de Inicio (index.html) --- */
+.hero-section {
+  /* Se cambia el color de fondo por una imagen */
+  background-image: linear-gradient(rgba(20, 25, 40, 0.6), rgba(20, 25, 40, 0.6)), url("https://images.pexels.com/photos/1535244/pexels-photo-1535244.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-size: cover; /* La imagen cubre todo el contenedor */
+  background-position: center; /* La imagen se centra */
+  color: var(--color-white); /* El texto pasa a ser blanco para contrastar */
+  text-align: center;
+  padding: 120px 0; /*  Aumentamos el padding para más impacto visual */
+}
+
+/* Se necesita especificar el color de los elementos hijos */
+.hero-section h1, .hero-section p {
+  color: var(--color-white);
+}
+
+.hero-section h1 {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+}
+
+.services-section {
+  padding-top: 0;
+  padding-bottom: 80px;
+}
+
+.services-container {
+  display: flex;
+  gap: 40px;
+}
+
+.service-card {
+  background-color: var(--color-light-gray);
+  padding: 40px;
+  border-radius: 10px;
+  flex: 1;
+  border: 1px solid #eee;
+}
+
+.service-card h2 {
+  margin-bottom: 20px;
+  color: var(--bs-primary);
+}
+
+.service-card.personal h2 {
+  color: var(--color-secondary);
+}
+
+.service-card p {
+  margin-bottom: 30px;
+}
+
+.clients-section {
+  background-color: var(--color-white);
+  padding: 40px 0;
+  text-align: center;
+}
+
+.clients-section h3 {
+  margin-bottom: 30px;
+  color: #6c757d;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 1rem;
+}
+
+.logos-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start; /* Alinea los items al inicio */
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Estilos para cada item (nombre + logo) */
+.logo-item {
+  display: flex;
+  flex-direction: column; /* Coloca el logo debajo del nombre */
+  align-items: center;
+  gap: 15px; /* Espacio entre el nombre y el logo */
+  text-align: center;
+  font-weight: 700;
+  color: #6c757d;
+}
+
+/* Estilos para las imágenes de los logos */
+.logo-item img {
+  max-height: 100px;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al pasar el mouse sobre el logo */
+.logo-item:hover img {
+  opacity: 1;
+}
+
+.case-studies-section {
+  padding-top: 0;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.case-studies-section h2 {
+  margin-bottom: 40px;
+}
+
+.cases-container {
+  display: flex;
+  gap: 30px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.case-card {
+  background-color: var(--color-white);
+  padding: 30px;
+  border-radius: 10px;
+  flex: 1;
+  border-left: 5px solid var(--color-success);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+.case-card h4 {
+  margin-bottom: 100px;
+}
+
+/* --- 4.2. Página de Instituciones (instituciones.html) --- */
+.service-grid-section {
+  padding: 80px 0;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 100%;
+  height: 350px;
+  perspective: 1000px; /* Efecto 3D */
+  cursor: pointer;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Clase que se añade con JS al hacer click para girar */
+.flip-card.is-flipped .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Caras frontal y trasera */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Estilos de la cara frontal (con imagen) */
+.flip-card-front {
+  color: white;
+  background-size: cover;
+  background-position: center;
+  /* Superposición oscura para legibilidad del texto */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.flip-card-front .service-item-icon {
+  font-size: 3rem;
+}
+
+.flip-card-front h3 {
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+/* Estilos de la cara trasera (con texto) */
+.flip-card-back {
+  background-color: var(--color-light-gray);
+  color: var(--color-dark);
+  transform: rotateY(180deg);
+}
+
+.flip-card-back h3 {
+  color: var(--bs-primary);
+}
+
+.flip-card-back p {
+  font-size: 0.9rem;
+}
+
+/* --- 4.3. Página Para Vos (para-vos.html) --- */
+.service-list-section {
+  padding: 80px 0;
+}
+
+.service-item {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.service-item-icon {
+  font-size: 2.5rem;
+  color: var(--bs-primary);
+  margin-top: 5px;
+}
+
+.service-item-content h3 {
+  margin-bottom: 10px;
+}
+
+/* --- 4.4. Página Casos de Éxito (casos-de-exito.html) --- */
+.case-study-page {
+  padding: 80px 0;
+}
+
+.case-study-item {
+  background: var(--color-light-gray);
+  border-radius: 10px;
+  padding: 40px;
+  margin-bottom: 40px;
+  border-left: 5px solid var(--color-success);
+}
+
+.case-study-item .case-study-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Para que se adapte en móviles */
+}
+
+.case-study-item .case-study-logo {
+  max-height: 50px;
+  max-width: 150px;
+  object-fit: contain;
+}
+
+.case-study-item h2 {
+  margin-bottom: 0;
+}
+
+.case-study-item h3 {
+  font-size: 1.2rem;
+  color: var(--color-dark);
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.case-study-item blockquote {
+  font-style: italic;
+  color: #6c757d;
+  border-left: 3px solid #ccc;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+
+/* --- 4.5. Página Nosotros (nosotros.html) --- */
+/* Estilo específico para el encabezado de la página Nosotros */
+.page-hero.hero-nosotros {
+  background-color: var(--color-warning); /* Color amarillo/naranja del footer */
+}
+
+/* Ajuste de color de texto para que sea legible sobre el fondo claro */
+.page-hero.hero-nosotros h1,
+.page-hero.hero-nosotros p {
+  color: var(--color-dark); /* Texto oscuro */
+}
+
+.about-section {
+  padding: 80px 0;
+}
+
+.founders-section {
+  padding: 80px 0;
+  background-color: var(--color-light-gray);
+}
+
+.founder-card {
+  text-align: center;
+}
+
+.founder-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+  border: 5px solid var(--color-white);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.founder-card h4 {
+  margin-bottom: 5px;
+}
+
+.founder-card .role {
+  color: var(--bs-primary);
+  font-weight: 700;
+}
+
+/* --- 4.6. Página Contacto (contacto.html) --- */
+.contact-section {
+  padding: 80px 0;
+}
+
+.contact-form {
+  background-color: var(--color-light-gray);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.contact-form .form-group {
+  margin-bottom: 1.5rem;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.contact-info-item i {
+  font-size: 1.5rem;
+  color: var(--bs-primary);
+}
+
+/*
+=================================================================
+[#] 5. ANIMACIONES Y EFECTOS
+    --- 5.1. Animación de Entrada al Hacer Scroll
+=================================================================
+*/
+/*
+============================================
+[#] 5. ANIMACIONES Y EFECTOS
+============================================
+*/
+/* --- 5.1. Animación de Entrada al Hacer Scroll --- */
+.fade-in-section {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/*
+=================================================================
+[#] 6. MEDIA QUERIES (DISEÑO RESPONSIVE)
+=================================================================
+*/
+/*
+============================================
+[#] 6. MEDIA QUERIES (DISEÑO RESPONSIVE)
+============================================
+*/
+@media (max-width: 991px) {
+  .main-header .nav-link {
+    margin: 5px 0;
+    text-align: center;
+  }
+  .main-header .button-contact {
+    width: 100%;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+  .services-container, .cases-container, .footer-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */

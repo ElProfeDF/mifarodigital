@@ -1,0 +1,37 @@
+/* --- 4.5. Página Nosotros (nosotros.html) --- */
+/* Estilo específico para el encabezado de la página Nosotros */
+.page-hero.hero-nosotros {
+    background-color: var(--color-warning); /* Color amarillo/naranja del footer */
+}
+
+/* Ajuste de color de texto para que sea legible sobre el fondo claro */
+.page-hero.hero-nosotros h1,
+.page-hero.hero-nosotros p {
+    color: var(--color-dark); /* Texto oscuro */
+}
+.about-section {
+    padding: 80px 0;
+}
+.founders-section {
+    padding: 80px 0;
+    background-color: var(--color-light-gray);
+}
+.founder-card {
+    text-align: center;
+}
+.founder-card img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 5px solid var(--color-white);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+.founder-card h4 {
+    margin-bottom: 5px;
+}
+.founder-card .role {
+    color: var(--bs-primary);
+    font-weight: 700;
+}

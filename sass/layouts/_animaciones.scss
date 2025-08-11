@@ -1,0 +1,16 @@
+/*
+============================================
+[#] 5. ANIMACIONES Y EFECTOS
+============================================
+*/
+
+/* --- 5.1. Animación de Entrada al Hacer Scroll --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}

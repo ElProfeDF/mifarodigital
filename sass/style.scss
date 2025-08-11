@@ -1,0 +1,92 @@
+/*
+=================================================================
+[#] MI FARO DIGITAL - HOJA DE ESTILOS PRINCIPAL
+=================================================================
+ÍNDICE:
+[#] 1. ESTILOS RESET
+    --- 1.1. Variables de Raíz (Colores, Fuentes)
+    --- 1.2. Estilos Generales del Body y Tipografía
+[#] 2. COMPONENTES REUTILIZABLES
+    --- 2.1. Botones
+    --- 2.2. Separadores de Sección
+[#] 3. ESTRUCTURA PRINCIPAL DEL SITIO
+    --- 3.1. Header y Navegación (Bootstrap Navbar)
+    --- 3.2. Footer
+[#] 4. ESTILOS ESPECÍFICOS POR PÁGINA
+    --- 4.1. Página de Inicio (index.html)
+    --- 4.2. Página de Instituciones (instituciones.html)
+    --- 4.3. Página Para Vos (para-vos.html)
+    --- 4.4. Página Casos de Éxito (casos-de-exito.html)
+    --- 4.5. Página Nosotros (nosotros.html)
+    --- 4.6. Página Contacto (contacto.html)
+[#] 5. ANIMACIONES Y EFECTOS
+    --- 5.1. Animación de Entrada al Hacer Scroll
+[#] 6. MEDIA QUERIES (DISEÑO RESPONSIVE)
+=================================================================
+*/
+/*
+=================================================================
+[#] 1. ESTILOS RESET
+    --- 1.1. Variables de Raíz (Colores, Fuentes)
+    --- 1.2. Estilos Generales del Body y Tipografía
+=================================================================
+*/
+
+@use "base/reset";
+
+/*
+=================================================================
+[#] 2. COMPONENTES REUTILIZABLES
+    --- 2.1. Botones
+    --- 2.2. Separadores de Sección
+=================================================================
+*/
+
+@use "layouts/main";
+
+/*
+=================================================================
+[#] 3. ESTRUCTURA PRINCIPAL DEL SITIO
+    --- 3.1. Header y Navegación (Bootstrap Navbar)
+    --- 3.2. Footer
+=================================================================
+*/
+
+@use "layouts/header";
+@use "layouts/footer";
+
+/*
+=================================================================
+[#] 4. ESTILOS ESPECÍFICOS POR PÁGINA
+    --- 4.1. Página de Inicio (index.html)
+    --- 4.2. Página de Instituciones (instituciones.html)
+    --- 4.3. Página Para Vos (para-vos.html)
+    --- 4.4. Página Casos de Éxito (casos-de-exito.html)
+    --- 4.5. Página Nosotros (nosotros.html)
+    --- 4.6. Página Contacto (contacto.html)
+=================================================================
+*/
+
+@use "pages/index";
+@use "pages/instituciones";
+@use "pages/para-vos";
+@use "pages/casos-de-exito";
+@use "pages/nosotros";
+@use "pages/contacto";
+
+/*
+=================================================================
+[#] 5. ANIMACIONES Y EFECTOS
+    --- 5.1. Animación de Entrada al Hacer Scroll
+=================================================================
+*/
+
+@use "layouts/animaciones";
+
+/*
+=================================================================
+[#] 6. MEDIA QUERIES (DISEÑO RESPONSIVE)
+=================================================================
+*/
+
+@use "base/mediaq";

@@ -1,0 +1,32 @@
+/*
+============================================
+[#] 1. ESTILOS RESET
+============================================
+*/
+
+/* --- 1.1. Variables de Raíz (Colores, Fuentes) --- */
+:root {
+    --font-title: 'Poppins', sans-serif;
+    --font-text: 'Lato', sans-serif;
+    
+    --color-white: #FFFFFF;
+    --color-dark: #212529;
+    --color-light-gray: #F8F9FA;
+    
+    --bs-primary: #0D6EFD; /* Azul Faro */
+    --color-secondary: #D63384; /* Magenta */
+    --color-success: #198754; /* Verde Éxito */
+    --color-warning: #FFC107; /* Amarillo Idea */
+}
+
+/* --- 1.2. Estilos Generales del Body y Tipografía --- */
+body {
+    --bs-body-font-family: var(--font-text);
+    --bs-body-color: var(--color-dark);
+    --bs-body-line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: var(--font-title);
+    font-weight: 700;
+}

@@ -1,0 +1,66 @@
+/* --- 4.2. Página de Instituciones (instituciones.html) --- */
+
+
+.service-grid-section {
+    padding: 80px 0;
+}
+.flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 350px;
+    perspective: 1000px; /* Efecto 3D */
+    cursor: pointer;
+}
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+/* Clase que se añade con JS al hacer click para girar */
+.flip-card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+/* Caras frontal y trasera */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+/* Estilos de la cara frontal (con imagen) */
+.flip-card-front {
+    color: white;
+    background-size: cover;
+    background-position: center;
+    /* Superposición oscura para legibilidad del texto */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+.flip-card-front .service-item-icon {
+    font-size: 3rem;
+}
+.flip-card-front h3 {
+    margin-top: 15px;
+    font-size: 1.5rem;
+}
+/* Estilos de la cara trasera (con texto) */
+.flip-card-back {
+    background-color: var(--color-light-gray);
+    color: var(--color-dark);
+    transform: rotateY(180deg);
+}
+.flip-card-back h3 {
+    color: var(--bs-primary);
+}
+.flip-card-back p {
+    font-size: 0.9rem;
+}
