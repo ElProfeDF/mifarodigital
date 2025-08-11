@@ -2,6 +2,7 @@
   "name": "mi-faro-digital",
   "version": "1.0.0",
   "description": "",
+  "keywords": [],
   "homepage": "https://github.com/ElProfeDF/mifarodigital#readme",
   "bugs": {
     "url": "https://github.com/ElProfeDF/mifarodigital/issues"
@@ -16,6 +17,5 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": []
+  }
 }
